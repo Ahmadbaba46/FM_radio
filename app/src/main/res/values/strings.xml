@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">FM Radio Remote</string>
+    <string-array name = "Timer">
+        <item>4 h</item>
+        <item>3 h</item>
+        <item>2 h</item>
+        <item>1 h</item>
+        <item>10 m</item>
+        <item>1 m</item>
+    </string-array>
+
+    <string-array name = "VolChooser">
+        <item>Vol 01</item>
+        <item>Vol 02</item>
+        <item>Vol 03</item>
+        <item>Vol 04</item>
+        <item>Vol 05</item>
+        <item>Vol 06</item>
+        <item>Vol 07</item>
+        <item>Vol 08</item>
+        <item>Vol 09</item>
+        <item>Vol 10</item>
+        <item>Vol 11</item>
+        <item>Vol 12</item>
+        <item>Vol 13</item>
+        <item>Vol 14</item>
+        <item>Vol 15</item>
+    </string-array>
+
+    <string-array name = "StationChooser">
+        <item>Ch 1</item>
+        <item>Ch 2</item>
+        <item>Ch 3</item>
+        <item>Ch 4</item>
+        <item>Ch 5</item>
+        <item>Ch 6</item>
+        <item>Ch 7</item>
+        <item>Ch 8</item>
+        <item>Ch 9</item>
+    </string-array>
+</resources>

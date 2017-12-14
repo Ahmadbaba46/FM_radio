@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="florin.radiov4.MainActivity"
+    android:background="#949478">
+
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/onOffButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/on_sel"/>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/muteOnButton"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/onOffButton"
+        android:layout_marginLeft="90dp"
+        android:background="@drawable/mute_sel"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/infoTextView"
+        android:textColor="#1d2625"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/muteOnButton"
+        android:layout_marginLeft="5dp"
+        android:layout_alignBottom="@+id/muteOnButton"
+        android:textStyle="italic"/>
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/connectButton"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@+id/muteOnButton"
+        android:layout_alignRight="@+id/rdsTextView"
+        android:background="@drawable/bluetoothicon"
+        android:visibility="invisible"/>
+
+
+    <TextView
+        android:id="@+id/freqTextView"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rdsTextView"
+        android:layout_alignBottom="@+id/rdsTextView"
+        android:layout_alignParentStart="true"
+        android:singleLine="true"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#1f30d6"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:layout_below="@+id/infoTextView"
+        android:textSize="18sp"
+        android:text=""
+        android:id="@+id/rdsTextView"
+        android:layout_toRightOf="@+id/freqTextView"
+        android:textColor="#380b05"/>
+
+
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/scanUpButton"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/freqTextView"
+        android:background="@drawable/up_button_sel"
+        android:clickable="true"/>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/volPlusButton"
+        android:layout_below="@+id/freqTextView"
+        android:layout_toRightOf="@+id/scanUpButton"
+        android:layout_marginLeft="85dp"
+        android:background="@drawable/vol_up_sel"/>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/storeButton"
+        android:layout_below="@+id/rdsTextView"
+        android:layout_toRightOf="@+id/volPlusButton"
+        android:layout_marginLeft="85dp"
+        android:background="@drawable/save_sel"/>
+
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/scanDownButton"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/scanUpButton"
+        android:background="@drawable/down_button_sel"
+        android:clickable="true"/>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/volMinusButton"
+        android:layout_below="@+id/volPlusButton"
+        android:layout_toRightOf="@+id/scanDownButton"
+        android:layout_marginLeft="85dp"
+        android:background="@drawable/vol_down_sel"/>
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/lightButton"
+        android:layout_below="@+id/storeButton"
+        android:layout_toRightOf="@+id/volMinusButton"
+        android:layout_marginLeft="85dp"
+        android:background="@drawable/light_sel"/>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_below="@+id/scanDownButton"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:checked="false"
+            android:gravity="bottom"
+            android:padding="5dp"
+            android:text="1"
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:textStyle="bold"
+            android:textSize="30dp"/>
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:gravity="bottom"
+            android:padding="5dp"
+
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:text="2"/>
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:gravity="bottom"
+            android:padding="5dp"
+
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:text="3"
+            android:textSize="30dp"
+            android:textStyle="bold"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/radioGroup1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:checked="false"
+            android:padding="5dp"
+
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:textStyle="bold"
+            android:text="4"
+            android:gravity="bottom"
+            android:textSize="30dp"/>
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:padding="5dp"
+
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:text="5"
+            android:textStyle="bold"
+            android:gravity="bottom"
+            android:textSize="30dp"/>
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:padding="5dp"
+
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="bottom"
+            android:text="6"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/radioGroup2"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:checked="false"
+            android:padding="5dp"
+
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:text="7"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:gravity="bottom"/>
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:padding="5dp"
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:text="8"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:gravity="bottom"/>
+        <RadioButton
+            android:id="@+id/radioButton9"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:gravity="bottom"
+            android:padding="5dp"
+
+            android:onClick="onRadioButtonClicked"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:text="9"/>
+    </RadioGroup>
+
+
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/volumeSpinner"
+        android:layout_below="@+id/radioGroup3"
+        android:layout_alignBottom="@+id/setAlarmButton"
+        android:spinnerMode="dropdown"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:visibility="visible"/>
+    <Spinner
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/radioGroup3"
+        android:layout_marginLeft="15dp"
+        android:id="@+id/stationSpinner"
+        android:layout_toRightOf="@+id/volumeSpinner"
+        android:spinnerMode="dropdown"
+        android:layout_alignBottom="@+id/setAlarmButton"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:visibility="visible"/>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/alarmTextView"
+        android:text=""
+        android:layout_below="@+id/radioGroup3"
+        android:layout_alignBottom="@+id/setAlarmButton"
+        android:layout_toRightOf="@+id/stationSpinner"
+        android:textSize="15sp"
+        android:visibility="visible"/>
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/setAlarmButton"
+        android:layout_below="@+id/radioGroup3"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/alarm_sel"
+        android:visibility="visible"/>
+
+
+
+
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/volumeSpinner"
+        android:id="@+id/alarmSwitch"
+        android:background="@drawable/alarm_sw_sel"
+        android:layout_alignParentStart="true"
+        android:visibility="visible"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="34dp"
+        android:layout_toRightOf="@+id/alarmSwitch"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/powerOnTextView"
+        android:textColor="#1f30d6"
+        android:textSize="16dp"
+        android:layout_below="@+id/stationSpinner"
+        android:lines="1"
+        android:visibility="visible"/>
+
+
+    <Spinner
+        android:id="@+id/timeChooser"
+        style="@style/Base.Animation.AppCompat.DropDownUp"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_alignBaseline="@+id/clockTextView"
+        android:layout_alignBottom="@+id/clockTextView"
+        android:layout_alignStart="@+id/alarmSwitch"
+        android:background="@color/accent_material_dark"
+        android:entries="@array/Timer" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/timeChooser"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/clockTextView"
+        android:textSize="15dp"
+        android:layout_below="@+id/powerOnTextView"
+        android:textColor="#4d0000"
+        android:lines="1"/>
+
+
+
+</RelativeLayout>
