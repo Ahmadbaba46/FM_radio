@@ -1,4 +1,4 @@
-inpired from: http://www.nutsvolts.com/magazine/article/February2014_Lindley
+inspired from: http://www.nutsvolts.com/magazine/article/February2014_Lindley
 
 #FM radio with SI4703 and Arduino
 
